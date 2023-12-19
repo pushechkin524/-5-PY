@@ -20,8 +20,7 @@ class Database:
                         return self.cursor.execute(query).fetchall()
                     self.cursor.execute(query)
         except Exception as e:
-            print(f"Ошибка: {e}")
-
+          pass
     def insertData(self, table, data):
         columns = ", ".join(data.keys())
         placeholders = ", ".join("?" for _ in data)
